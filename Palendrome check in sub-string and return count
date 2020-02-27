@@ -2,7 +2,6 @@ let palValue = 0;
 
 function fnCheckPalendrome(strValue){
   if(strValue == strValue.split('').reverse().join('')){
-    console.log(strValue);
     palValue++;
   }
 }
