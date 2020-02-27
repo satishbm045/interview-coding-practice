@@ -1,0 +1,21 @@
+let palValue = 0;
+
+function fnCheckPalendrome(strValue){
+  if(strValue == strValue.split('').reverse().join('')){
+    console.log(strValue);
+    palValue++;
+  }
+}
+
+function fnResultPalendrome(str){
+  for(var i=0; i<str.length; i++){
+    for(var j=i+1; j<=str.length; j++){
+      fnCheckPalendrome(str.slice(i,j));
+    }
+  }
+  return palValue;
+}
+
+console.log(fnResultPalendrome("aaa")); //output: 6
+console.log(fnResultPalendrome("gadag")); //output: 7
+console.log(fnResultPalendrome("tacocat")); //output: 10
